@@ -1,0 +1,76 @@
+<%= form_for @register do |f| %>
+
+
+<h1>新規投稿</h1>
+
+<%= form_for @register do |f| %>
+  
+
+  <h5> タイトル </h5>
+  <div class="field1">
+  
+  <%=f.text_area :name, :size=>"30" %>
+  </div>
+
+
+<h5>タグ</h5>
+  <div class="field2">
+  
+  <div>
+        <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "syohei"  %>
+  </div>
+
+  </div>
+
+  <h5>写真を投稿！！ </h5>
+  <div class="field3">
+    <%= f.file_field :image %>
+  </div>
+  
+  <h5>E-sportとして採用されているか</h5>
+  <div class="field4">
+    
+    <%= f.select :sport, 
+      [["Yes!", "Yes!"], 
+      ["No!", "NO!"], 
+      ["I don't know!", "I don't know"]], include_blank: "選択して下さい" %>
+  </div>
+
+
+  <h5>総合評価</h5>
+  <div class="field5">
+    <%= f.radio_button :eve, 5 ,id: 'star1'%>
+    <label for="star1"><span class="text">Great!!</span>★</label>
+
+    <%= f.radio_button :eve, 4 ,id: 'star2'%>
+    <label for="star2"><span class="text">Good!!</span>★</label>
+
+    <%= f.radio_button :eve, 3 ,id: 'star3'%>
+    <label for="star3"><span class="text">Normal</span>★</label>
+
+    <%= f.radio_button :eve, 2 ,id: 'star4'%>
+    <label for="star4"><span class="text">Bad</span>★</label>
+
+    <%= f.radio_button :eve, 1 ,id: 'star5'%>
+    <label for="star5"><span class="text">Worst</span>★</label>
+  </div>
+
+
+  <h5>コメント</h5>
+  <div class="field6">
+  <%=f.text_area :about, :size=>"60x10" %>
+  </div>
+
+  <div class="field7">
+  <%= f.submit "編集", class: "btn-register" %>
+  </div>
+<% end %>
+
+
+
+</div>
+</div>
+</div>
+
+
+  <% end %>

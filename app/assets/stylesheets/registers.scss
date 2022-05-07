@@ -1,0 +1,218 @@
+// Place all the styles related to the registers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+h3{
+  align-self: center;
+  text-align: center;
+  color: #ffeba7;
+  font-size: 60px;
+}
+
+h5{
+  align-self: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+
+.item-img-content{
+ text-align: center;
+ align-items: center;
+}
+
+
+.registers-container{
+  justify-content:left;
+  resize: vertical;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  line-height: 1;
+  margin: 5em;
+  padding: 5em;
+}
+
+.register2{
+    border: 4px double #ddd;
+    margin: 5em;
+    padding: 5em;
+}
+
+.search{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content:center;
+}
+
+
+
+
+.register-detail{
+  margin-bottom: 1em;
+    overflow: hidden;
+    border-bottom: 1px solid #333;
+}
+
+.field1{
+    text-align: center;
+}
+.field2{
+    text-align: center;
+}
+.field3{
+    text-align: center;
+}
+.field4{
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+}
+
+.field5{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  .field5 input[type='radio']{
+    display: none;
+  }
+  .field5 label{
+    position: relative;
+    padding: 10px 10px 0;
+    color: gray;
+    cursor: pointer;
+    font-size: 30px; /*星の大きさを変更するときはここ*/
+  }
+  .field5 label .text{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-size: 9px; /*星の上の説明書きの大きさを変更するときはここ*/
+    color: gray;
+  }
+  .field5 label:hover,
+  .field5 label:hover ~ label,
+  .field5 input[type='radio']:checked ~ label{
+    color: #ffcc00;
+  }
+
+
+.field6{
+  
+  text-align: center;
+}
+
+
+
+
+
+.field7{
+ margin-top: 5em;
+ height: 20em;
+ text-align: center; 
+}
+
+.btn-register{
+  width: 25%;
+  height: 3em;
+}
+
+
+
+.star-rating {
+  position: relative;
+  display: inline-block;
+  width: 5em;
+  height: 1em;
+  font-size: 25px;
+}
+.star-rating-front {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: #ffcc33;
+}
+.star-rating-back {
+  display: inline-block;
+  color: #ccc;
+
+}
+
+
+
+
+.new-box{
+  background-color: #111;
+  max-width: 600px;
+  padding: 40px 40px;
+  margin: 0 auto;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.area{
+ margin: 5em;
+}
+
+area.h1{
+  font-size: large;
+}
+
+
+/*show*/
+
+
+
+h2{
+  text-align: end;
+  font-size: 40px;
+}
+
+
+.show-image{
+  text-align: start;
+}
+
+.container{
+  text-align: end;
+}
+
+
+
+.box26 {
+    display: flex;
+    justify-content: center;
+    height: 72em;
+    margin: 10ex;
+   
+}
+
+.show-image {
+  margin-right: 200px;
+  padding: 0.5em 1em;
+  border: solid 3px #95ccff;
+  border-radius: 8px;
+}
+
+
+
+
+
+

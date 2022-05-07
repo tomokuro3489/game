@@ -1,0 +1,139 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.main-container{
+  height: 900px;
+  padding: 60px;
+  background-image: url("first-back.jpg");
+  background-size: cover;
+ 
+}
+
+    .box_css{
+      font-size: 20px;
+      text-align: right;
+
+    }
+
+    nav{
+      font-size: 32px;
+      text-align: center;
+    }
+
+
+    a {
+      font-size: 40px;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: #f00;
+    }
+
+   .login{
+    font-size: 32px;
+    text-align: right;
+   }
+
+   li{
+     margin: 5em;
+   }
+
+
+  .introduction-block2 {
+    padding: 0.5em 1em;
+    overflow: hidden;
+    color: #FFF;
+    height: 600px;
+    width: 100%;
+    background-color: cover;
+  }
+
+  
+ 
+
+  
+
+  .introduction-block3 {
+    height: 600px;
+    width: 100%;
+    padding: 0.5em 1em;
+    background: -moz-linear-gradient(#ff708d, #ffb03c);
+    background: -webkit-linear-gradient(#ff708d, #ffb03c);
+    background: linear-gradient(to right, #ff708d, #ffb03c);
+    color: #FFF;
+  }
+
+
+
+  h2{
+  align-self: right;
+  text-align: left;
+  color: #ffeba7;
+  font-size: 60px;
+  }
+ 
+  
+  
+
+  
+  
+  
+

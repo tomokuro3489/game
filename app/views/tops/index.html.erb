@@ -1,0 +1,62 @@
+<%= stylesheet_link_tag 'index', :media => "all" %>
+
+
+<div class="main-container">
+
+ <% if user_signed_in? %>
+  <div class="box_css">
+  <li><%= link_to "新規投稿", new_register_path %></li>
+  <li><%= link_to "投稿一覧", registers_path %></li>
+  <li><%= link_to "おすすめ", registers_path %></li>
+  <h2>Game Navigation</h2>
+  </div>
+  
+  <% else %>
+
+  <div class="login">
+  <li><%= link_to "新規登録", new_user_registration_path %></li>
+  <li><%= link_to "ログイン", new_user_session_path %></li>
+  <h2>Game Navigation</h2>
+  </div>
+  
+  
+  <% end %>
+  </div>
+
+  <div class="introduction-block2">
+  
+
+    <label>About</label>
+    <br>
+    <h5>当サイトはゲームを</h5>
+    <br><h1>知りたい！</h1>
+    <br><h1>楽しみたい！</h1>
+    <br><h1>やってみたい！</h1>
+    <br>
+    <h5>と思う皆様に</h5>
+    <br>
+    <h1>さらに知ってほしい！！</h1>
+    <br>
+    <h1>さらに楽しんでほしい！！</h1>
+    <br>
+    <h1>さらにやってほしい！！</h1>
+    <br>
+    <h5>
+    との思いで作成したサイトになります！
+    自分が持っている個性（ゲーム）を存分に共有・提供していきましょう！！！！
+    </h5>
+    
+</div>
+
+  <div class="introduction-block3">
+  <label>Introduction</label>
+  
+  </div>
+ 
+  </div>
+  </div>
+
+  
+
+
+

@@ -1,0 +1,72 @@
+
+
+<h3>Game一覧</h3>
+
+<div class="search">
+
+ <div class="search2">
+<%= form_tag registers_path, method: :get, class: 'boards__searchForm' do %>
+	<%= select_tag :tag_id,
+				   options_from_collection_for_select(Tag.all, :id, :name, params[:tag_id]),
+				   {
+					 prompt: 'すべて',
+					 onchange: 'submit(this.form);'
+				   }
+	%>
+  <% end %>
+ </div>
+ <div class="search3">
+ <%= form_tag({controller:"registers",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+<% end %>
+ </div>
+</div>
+<div class="registers-container">
+		
+
+		<% @register.each do |t| %>
+			<div class="register">
+			<div class="register2">
+				<h1><%= t.name %></h1>
+
+				<%= link_to register_path(t.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag t.image_url, size: "250x200" if t.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				<% t.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+
+
+				
+				<% if user_signed_in? %>
+					<% if current_user.already_liked?(t) %>
+						<%= link_to register_like_path(id: t.id, register_id: t.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= t.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: t.id, register_id: t.id), method: :post do %>
+							<i class="far fa-heart"></i><%= t.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= t.likes.count %>
+
+			
+			<a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+	
+
+</div>
+
