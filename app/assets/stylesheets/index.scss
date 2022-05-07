@@ -107,21 +107,57 @@
   }
 
   
- 
-
-  
-
   .introduction-block3 {
+    padding-left: 20em;
     height: 600px;
     width: 100%;
     padding: 0.5em 1em;
-    background: -moz-linear-gradient(#ff708d, #ffb03c);
-    background: -webkit-linear-gradient(#ff708d, #ffb03c);
-    background: linear-gradient(to right, #ff708d, #ffb03c);
+    background: -moz-linear-gradient(#6427f1,#ff708d);
+    background: -webkit-linear-gradient(#6427f1,#ff708d);
+    background: linear-gradient(to right,#6427f1, #ff708d);
     color: #FFF;
   }
+  
+ .introduction-block4{
+  background: -moz-linear-gradient(#6427f1, #ff708d);
+  background: -webkit-linear-gradient(#6427f1, #ff708d);
+  background: linear-gradient(to right, #6427f1, #ff708d); 
+ margin-bottom: 10em;
+  flex-wrap: wrap;
+  display: flex;
+ 
+ }
 
+ .introduction-block5{
+   display: flex;
+ }
 
+ .introduction-block3-top{
+   margin: 5em;
+   
+ }
+
+ .introduction-block3-mypage{
+   margin: 5em;
+ }
+
+.introduction-block3-logout{
+  margin: 5em;
+  
+}
+
+.introduction-block3-new{
+  margin: 10em;
+ 
+}
+
+.introduction-block3-show{
+  margin: 10em;
+}
+
+.introduction-block3-osusume{
+  margin: 10em;
+}
 
   h2{
   align-self: right;
@@ -130,7 +166,47 @@
   font-size: 60px;
   }
  
-  
+.introduction-block3 h2{
+  border-bottom: #FFF;
+  align-self: center;
+  text-align: center;
+  color: #ffeba7;
+  font-size: 60px;
+}
+
+.introduction-block3 h3{
+  align-self: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+
+.introduction-block4 h1{
+  border-bottom:2px solid wheat;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+  color: #ffeba7;
+  font-size: 30px;
+}
+
+.introduction-block5 h1{
+  border-bottom:2px solid wheat;
+  align-self: center;
+  text-align: center;
+  color: #ffeba7;
+  font-size: 30px;
+}
+
+.introduction-block5 h3{
+  align-self: center;
+  text-align: center;
+  color: #ffffff;
+  font-size: 10px;
+}
+
+
   
 
   
