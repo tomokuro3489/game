@@ -62,7 +62,7 @@
   padding: 60px;
   background-image: url("first-back.jpg");
   background-size: cover;
- 
+  border-bottom:15px solid rgb(0, 0, 0);
 }
 
     .box_css{
@@ -99,13 +99,88 @@
 
   .introduction-block2 {
     padding: 0.5em 1em;
+    background-size: cover;
     overflow: hidden;
-    color: #FFF;
+    color: cover;
     height: 600px;
     width: 100%;
-    background-color: cover;
+    font-family: sans-serif;
+    position: relative;
+    background: -moz-linear-gradient(#6427f1,#6427f1);
+    background: -webkit-linear-gradient(#6427f1,#6427f1);
+    background: linear-gradient(to right,#6427f1, #ff708d);
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom:15px solid rgb(0, 0, 0);
   }
 
+  .introduction-block2-omo{
+    display: flex;
+    justify-content: center;
+ 
+  }
+
+  .introduction-block2-1{
+    padding: 5em;
+  }
+
+  .introduction-block2-2{
+    padding: 5em;
+  }
+
+  .introduction-block2-3{
+    padding: 5em;
+  }
+  
+  .introduction-block2-omo1{
+    display: flex;
+    justify-content: center;
+  }
+
+  .introduction-block2-4{
+    padding: 5em;
+  }
+
+  .introduction-block2-5{
+    padding: 5em;
+  }
+
+  .introduction-block2-6{
+    padding: 5em;
+  }
+  .introduction-block2 h2 {
+  
+  align-self: center;
+  text-align: center;
+  color: #ffeba7;
+  font-size: 60px;
+   
+  }
+
+
+
+.introduction-block2 h1 {
+  border-bottom:2px solid wheat;
+  font-size: 30px;
+  
+}
+
+
+.introduction-block2 h3 {
+  font-size: 15px;
+ 
+}
+
+@keyframes ani {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400% 0;
+  }
+}
   
   .introduction-block3 {
     padding-left: 20em;
@@ -115,7 +190,7 @@
     background: -moz-linear-gradient(#6427f1,#ff708d);
     background: -webkit-linear-gradient(#6427f1,#ff708d);
     background: linear-gradient(to right,#6427f1, #ff708d);
-    color: #FFF;
+    color: rgb(0, 0, 0);
   }
   
  .introduction-block4{
