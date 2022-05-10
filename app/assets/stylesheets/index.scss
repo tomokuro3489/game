@@ -122,6 +122,13 @@
  
   }
 
+  .introduction-block2 h3{
+    align-self: center;
+    text-align: center;
+    color: #ffeba7;
+    font-size: 20px;
+  }
+
   .introduction-block2-1{
     padding: 5em;
   }
@@ -168,10 +175,6 @@
 }
 
 
-.introduction-block2 h3 {
-  font-size: 15px;
- 
-}
 
 @keyframes ani {
   from {
@@ -192,6 +195,8 @@
     background: linear-gradient(to right,#6427f1, #ff708d);
     color: rgb(0, 0, 0);
   }
+
+
   
  .introduction-block4{
   background: -moz-linear-gradient(#6427f1, #ff708d);
@@ -253,7 +258,12 @@
   align-self: center;
   text-align: center;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 20px;
+}
+
+.introduction-block4{
+ 
+ margin-top: 20em;
 }
 
 
@@ -278,7 +288,7 @@
   align-self: center;
   text-align: center;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 25px;
 }
 
 

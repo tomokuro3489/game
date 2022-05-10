@@ -294,4 +294,43 @@ h1{
 .My{
 margin: 5em;
 }
+
+.mypage h1{
+  font-size: 60px;
+}
+.mypage{
+  font-size: 20px;
+}
+
+.My h2{
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+.mypage-top{
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
+
+.aaa h2{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+a{
+  border-bottom:2px solid rgb(255, 255, 255);
+}
+
+/*編集*/
+
+.edit-title h2{
+  justify-content: start;
+  align-items: start;
+  text-align: start;
+}
   
+.field{
+  margin: 5em;
+}

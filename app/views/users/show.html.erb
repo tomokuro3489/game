@@ -1,14 +1,20 @@
+
+<div class='mypage'>
 <h1>My Page</h1>
 <p>名前 : <%= @user.name %></p>
 <p>メールアドレス : <%= @user.email %></p>
 <p>プロフィール : <%= @user.profile %></p>
-
+</div>
 <% if current_user.id == @user.id %>
-  <%= link_to "編集する", edit_user_registration_path %>
+  <%= link_to "プロフィールを編集する", edit_user_registration_path %>
 <% end %>
 
+<div class='aaa'>
+
 <h2>ユーザーの投稿一覧</h2>
+</div>
 <div class="search">
+
 
  <div class="search2">
 <%= form_tag registers_path, method: :get, class: 'boards__searchForm' do %>
@@ -83,8 +89,9 @@
   <%= t.about %>
 <% end %>
 <!-- ここまで-->
-
+<div class='mypage-top'>
 <%= link_to "Topに戻る", tops_path %>
+</div>
 </div>
 
 
