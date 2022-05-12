@@ -26,7 +26,9 @@ h5{
 
 
 .registers-container{
-  justify-content:left;
+  align-self: center;
+  text-align: center;
+  justify-content:center;
   resize: vertical;
   display: flex;
   flex-wrap: wrap;
@@ -38,9 +40,12 @@ h5{
 }
 
 .register2{
-    border: 4px double #ddd;
-    margin: 5em;
-    padding: 5em;
+  align-self: center;
+  text-align: center;
+  justify-content:center;
+  border: 4px double #ddd;
+  margin: 10em;
+  padding: 10em;
 }
 
 .search{
@@ -191,6 +196,9 @@ h2{
 }
 
 .container{
+  background: cover;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
   text-align: end;
 }
 
@@ -212,9 +220,24 @@ h2{
 }
 
 .show-user{
-  height: 100px;
+  background: cover;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
+  margin-bottom: 1em;
 }
 
+.show-about{
+  background: cover;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
+  margin-bottom: 1em;
+}
 
+.show-edit{
+  background: cover;
+  border-top: solid 5px #5d627b;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
+  margin-bottom: 2em;
+}
 
 
