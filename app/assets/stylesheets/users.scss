@@ -291,46 +291,81 @@ h1{
     
   }
   
-.My{
-margin: 5em;
-}
-
-.mypage h1{
-  font-size: 60px;
-}
-.mypage{
-  font-size: 20px;
-}
-
-.My h2{
-  justify-content: start;
-  align-items: start;
-  text-align: start;
-}
-.mypage-top{
-  justify-content: start;
-  align-items: start;
-  text-align: start;
-}
-
-.aaa h2{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-a{
-  border-bottom:2px solid rgb(255, 255, 255);
-}
-
-/*編集*/
-
-.edit-title h2{
-  justify-content: start;
-  align-items: start;
-  text-align: start;
-}
+  /*my page*/
   
-.field{
+  .profile h4{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    color: #ffeba7;
+    font-size: 25px;
+  }
+
+
+
+  .profile{
+    margin: 5em;
+    color: white;
+    background: cover;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
+  }
+
+
+  .My{
   margin: 5em;
+  }
+
+  .mypage h1{
+    font-size: 60px;
+  }
+  .mypage{
+    font-size: 20px;
+  }
+
+  .My h2{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+  .mypage-top{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    margin-bottom: 10em;
+  }
+
+  .aaa h2{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  a{
+    border-bottom:2px solid rgb(255, 255, 255);
+  }
+
+
+  .registers-container{
+    justify-content: left;
+    resize: vertical;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    line-height: 1;
+    margin: 5em;
+    padding: 5em;
+  }
+  
+  /*編集*/
+
+  .edit-title h2{
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+  }
+    
+  .field{
+    margin: 5em;
 }

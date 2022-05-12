@@ -1,14 +1,19 @@
 
 <div class='mypage'>
 <h1>My Page</h1>
+<div class='profile'>
+<h4>プロフィール</h4>
 <p>名前 : <%= @user.name %></p>
 <p>メールアドレス : <%= @user.email %></p>
 <p>プロフィール : <%= @user.profile %></p>
-</div>
 <% if current_user.id == @user.id %>
   <%= link_to "プロフィールを編集する", edit_user_registration_path %>
 <% end %>
+</div>
+<div class='profile-1'>
 
+</div>
+</div>
 <div class='aaa'>
 
 <h2>ユーザーの投稿一覧</h2>
@@ -82,15 +87,61 @@
 		    <% end %>
 	
 </div>
+
 <h2>ユーザーがいいねした投稿一覧</h2>
-<br>
+<div class="registers-container">
+
+
 <% @user.liked_registers.each do |t| %>
-  <%= t.user.name %>
-  <%= t.about %>
-<% end %>
+ <div class="register">
+			<div class="register2">
+				<h1><%= t.name %></h1>
+
+				<%= link_to register_path(t.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag t.image_url, size: "250x200" if t.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				<% t.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+
+
+				
+				<% if user_signed_in? %>
+					<% if current_user.already_liked?(t) %>
+						<%= link_to register_like_path(id: t.id, register_id: t.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= t.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: t.id, register_id: t.id), method: :post do %>
+							<i class="far fa-heart"></i><%= t.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		
+
+				<% else %>
+			<i class="far fa-heart"></i><%= t.likes.count %>
+
+			
+			<a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+	
+</div>
+
+</div>
+
 <!-- ここまで-->
 <div class='mypage-top'>
 <%= link_to "Topに戻る", tops_path %>
+</div>
 </div>
 </div>
 
