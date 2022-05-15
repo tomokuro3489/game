@@ -83,8 +83,16 @@
       text-decoration: none;
     }
     
+    .box_css a:hover {
+      color: rgb(255, 0, 0);
+    }
+
+    .login a:hover {
+      color: rgb(255, 0, 0);
+    }
+
     a:hover {
-      color: #f00;
+      color: rgb(255, 0, 0);
     }
 
    .login{
@@ -93,7 +101,28 @@
    }
 
    li{
+     
      margin: 5em;
+   }
+
+   
+   .login li{
+     
+    margin-top: 5em;
+  }
+
+  
+
+   .box_css a{
+    opacity: 0.9;
+     background-color: rgb(77, 0, 185);
+     color:  #ffeba7;
+   }
+
+   .login a{
+    opacity: 0.9;
+     background-color: rgb(77, 0, 185);
+     color:  #ffeba7;
    }
 
 

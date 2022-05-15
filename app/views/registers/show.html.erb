@@ -29,15 +29,18 @@
   </div>
   <div class="container">
 
-  
+  <div class="show-title">
     <h2>Game Title</h2>
     <p><%= @register.name %></p>
-    
+  </div>
+
+  <div class="show-eve">
       <h2>総合評価</h2>
       <span class="star-rating">
         <span class="star-rating-front" style="width: <%= getPercent(@register.eve) %>%;">★★★★★</span>
         <span class="star-rating-back">★★★★★</span>
       </span>
+    </div>
     
   
     <div class="show-genre">
@@ -55,8 +58,11 @@
     
 <div class="show-about">
 <h2>コメント</h2>
+<div class="show-about-box">
   <p><%= @register.about %></p>
 </div>
+</div>
+
 
 
 
