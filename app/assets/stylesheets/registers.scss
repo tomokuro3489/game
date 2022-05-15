@@ -11,17 +11,30 @@ h3{
   font-size: 60px;
 }
 
-h5{
+.new h5{
   align-self: center;
   text-align: center;
   color: #ffffff;
-  font-size: 10px;
+  font-size: 20px;
 }
 
 
 .item-img-content{
  text-align: center;
  align-items: center;
+ width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+  transition-duration: 0.3s;
+}
+
+.item-img-content:hover{
+  border-radius: 0;
+  transition-duration: 0.3s;
 }
 
 
@@ -304,15 +317,33 @@ box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
   font-size: 15px;
   text-align: end;
 }
+
+.show-edit a{
+  font-size: 30px;
+  
+}
 /*edit*/
 
-.edit-1{
+.edit h5{
   align-self: center;
   text-align: center;
-  justify-content:center;
-  border: 4px double #ddd;
-  margin: 10em;
-  padding: 10em;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.edit-2{
+  background-color:#353746;
+  max-width: 600px;
+  padding: 40px 40px;
+  margin: 0 auto;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+ 
 }
 
 

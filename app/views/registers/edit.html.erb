@@ -1,24 +1,25 @@
-<%= form_for @register do |f| %>
+
 
 <div class="edit">
 <div class="edit-1">
+<div class="edit-2">
 <h1>投稿編集画面</h1>
 
 <%= form_for @register do |f| %>
   
 
-  <h5> タイトル </h5>
+  <h5> Game title </h5>
   <div class="field1">
   
   <%=f.text_area :name, :size=>"30" %>
   </div>
 
 
-<h5>タグ</h5>
+<h5>ジャンル</h5>
   <div class="field2">
   
   <div>
-        <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "syohei"  %>
+        <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "ジャンルを選択してください"  %>
   </div>
 
   </div>
@@ -75,5 +76,4 @@
 
 </div>
 
-
-  <% end %>
+</div>

@@ -12,18 +12,18 @@
 <%= form_for @register do |f| %>
   
 
-  <h5> タイトル </h5>
+  <h5> Game title </h5>
   <div class="field1">
   
   <%=f.text_area :name, :size=>"30" %>
   </div>
 
 
-<h5>タグ</h5>
+<h5>ジャンル</h5>
   <div class="field2">
   
   <div>
-        <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "タグを選択してください"  %>
+        <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "ジャンルを選択してください"  %>
   </div>
 
   </div>
