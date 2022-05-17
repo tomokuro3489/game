@@ -32,7 +32,7 @@
 
 				<%= link_to register_path(t.id) do %>
 					<div class='item-img-content'>
-				<%= image_tag t.image_url, size: "250x200" if t.image? %>
+				<%= image_tag t.image_url, size: "250x200", data: {"turbolinks" => false} if t.image? %>
 				    </div>
 				<% end %>
                     

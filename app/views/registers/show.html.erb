@@ -75,8 +75,8 @@
     <% if user_signed_in? && current_user.id == @register.user_id %> 
 </div>
 <div class="show-edit">
-    <h1><%= link_to "編集する", edit_register_path(@register.id) %></h1>
-    <h1><%= link_to "削除する", register_path(@register.id), method: :delete %></h1>
+    <h1><%= link_to "編集する", edit_register_path(@register.id) , data: {"turbolinks" => false} %></h1>
+    <h1><%= link_to "削除する", register_path(@register.id), method: :delete, data: {"turbolinks" => false}  %></h1>
     <% end %>
 
   
