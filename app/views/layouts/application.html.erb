@@ -24,10 +24,10 @@
     
     <nav class="nav">     
       <ul class="pt-5">
-        <li><a href="#"><%= link_to "Top", tops_path %></a></li>
+        <li><a href="#"><%= link_to "Top", tops_path, data: {"turbolinks" => false} %></a></li>
         <% if user_signed_in? %>
-        <li><a href="#"><%= link_to "My Page", user_path(current_user.id) %></a></li>
-        <li><a href="#"><%= link_to "Logout", destroy_user_session_path, method: :delete %></a></li>
+        <li><a href="#"><%= link_to "My Page", user_path(current_user.id), data: {"turbolinks" => false} %></a></li>
+        <li><a href="#"><%= link_to "Logout", destroy_user_session_path, method: :delete, data: {"turbolinks" => false} %></a></li>
         <% end %> 
       </ul>
     </nav>
