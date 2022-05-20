@@ -7,6 +7,7 @@
 			<div class="register">
 
 			<div class="register2">
+       
 				<h1><%= t.name %></h1>
 
 				<%= link_to home_path(t.id) do %>
@@ -23,6 +24,8 @@
 
 				
 				<% if user_signed_in? %>
+                
+              
 					<% if current_user.already_liked?(t) %>
 						<%= link_to register_like_path(id: t.id, register_id: t.id), method: :delete do %>
 							<i class="fas fa-heart"></i><%= t.likes.count %>
