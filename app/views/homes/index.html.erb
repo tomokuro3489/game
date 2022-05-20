@@ -1,9 +1,50 @@
+ <h3>おすすめ一覧</h3>
+ 
+ 
+ <div class="registers-container">
+		
+		<% @register.each do |t| %>
+			<div class="register">
 
-<div>
-<% if user_signed_in? %>
-<li><%= button_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-<% else %>
-<li><%= link_to "新規登録", new_user_registration_path %></li>
-<li><%= link_to "ログイン", new_user_session_path %></li>
-<% end %>
+			<div class="register2">
+				<h1><%= t.name %></h1>
+
+				<%= link_to home_path(t.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag t.image_url, size: "250x200", data: {"turbolinks" => false} if t.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				<% t.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+
+
+				
+				<% if user_signed_in? %>
+					<% if current_user.already_liked?(t) %>
+						<%= link_to register_like_path(id: t.id, register_id: t.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= t.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: t.id, register_id: t.id), method: :post do %>
+							<i class="far fa-heart"></i><%= t.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= t.likes.count %>
+
+			
+			<a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+	
+
 </div>

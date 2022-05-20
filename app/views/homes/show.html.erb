@@ -1,0 +1,91 @@
+<div class="show">
+<h3>Game詳細</h3>
+<div class="register_show">
+
+<div class="box26">
+  <div class="show-image">
+    <%= image_tag @register.image_url, size: "450x350" if @register.image? %>
+  <div class="show-create">
+  <div class="show-like">
+  <% if user_signed_in? %>
+  <% if current_user.already_liked?(@register) %>
+      <%= link_to register_like_path(@register), method: :delete do %>
+         <p>いいねを取り消す</p><i class="fas fa-heart"></i><%= @register.likes.count %>
+   
+      <% end %>
+  <% else %>
+      <%= link_to register_likes_path(@register), method: :post do %>
+         <p>いいね</p><i class="fas fa-heart"></i><%= @register.likes.count %>
+      <% end %>
+  <% end %>
+<% else %>
+  <p>いいねの数 = </p><%= @register.likes.count %>
+<% end %>
+</div>
+  <p><%= @register.created_at %></p>
+  </div>
+  </div>
+  <div class="container">
+
+  <div class="show-title">
+    <h2>Game Title</h2>
+    <p><%= @register.name %></p>
+  </div>
+
+  <div class="show-eve">
+      <h2>総合評価</h2>
+      <span class="star-rating">
+        <span class="star-rating-front" style="width: <%= getPercent(@register.eve) %>%;">★★★★★</span>
+        <span class="star-rating-back">★★★★★</span>
+      </span>
+    </div>
+    
+  
+    <div class="show-genre">
+    <h2>ジャンル</h2>
+          <p><%= @register.genre %></p>
+            <% @register.tags.each do |tag| %>
+        <%= tag.name %>
+      <%end%>
+    </div>
+    <div class="show-sport">
+    <h2>E-sportの採用</h2>
+      <p><%= @register.sport %></p>
+    </div>
+ 
+    
+<div class="show-about">
+<h2>コメント</h2>
+<div class="show-about-box">
+  <p><%= @register.about %></p>
+</div>
+</div>
+
+
+
+
+
+<div class="show-user">
+    <h2>いいねしたユーザー</h2>
+    <% @register.liked_users.each do |user| %>
+      <li><%= user.name %></li>
+    <% end %>
+    <% if user_signed_in? && current_user.id == @register.user_id %> 
+</div>
+<div class="show-edit">
+    <h1><%= link_to "編集する", edit_register_path(@register.id) , data: {"turbolinks" => false} %></h1>
+    <h1><%= link_to "削除する", register_path(@register.id), method: :delete, data: {"turbolinks" => false}  %></h1>
+    <% end %>
+
+  
+</div>
+<h3><%= link_to "Game一覧に戻る", homes_path, data: {"turbolinks" => false} %></h3>
+</div>
+
+
+ 
+</div>
+
+</div>
+
+</div>
