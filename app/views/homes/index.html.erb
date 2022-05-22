@@ -1,24 +1,25 @@
  <h3>おすすめ一覧</h3>
  
-
-  
+<div class="all">
+  <h4><span>今回のCHAMPION</span></h4>
+</div>
  <div class="registers-container">
 		
-	 <% @register.each.with_index(1) do |t, i| %>	
+	 <% @register.each.with_index(1) do |s, i| %>	
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= t.name %></h1>
+				<h1><%= s.name %></h1>
 
-				<%= link_to home_path(t.id) do %>
+				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
-				<%= image_tag t.image_url, size: "250x200", data: {"turbolinks" => false} if t.image? %>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
 				    </div>
 				<% end %>
                     
 			<div class="register-detail">
-				<% t.tags.each do |tag| %>
+			<% s.tags.each do |tag| %>
 					<h5><%= tag.name %></h5>
 				<% end %>
 
@@ -27,13 +28,13 @@
 				<% if user_signed_in? %>
                 
               
-					<% if current_user.already_liked?(t) %>
-						<%= link_to register_like_path(id: t.id, register_id: t.id), method: :delete do %>
-							<i class="fas fa-heart"></i><%= t.likes.count %>
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
 						<% end %>
 					<% else %>
-						<%= link_to register_likes_path(id: t.id, register_id: t.id), method: :post do %>
-							<i class="far fa-heart"></i><%= t.likes.count %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
 						<% end %>
 					<% end %>
 					</div>
@@ -41,14 +42,474 @@
 		</div>
 
 				<% else %>
-			<i class="far fa-heart"></i><%= t.likes.count %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+				<% end %>
+</div>
+
+<div class="all">
+  <h4><span>アクションゲーム</span></h4>
+</div>
+ <div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= t.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
 			    <% end %>
 
 			
 		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>シューティングゲーム</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study1.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>シュミレーションゲーム</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study2.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>レーションゲーム</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study3.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+
+<div class="all">
+  <h4><span>アドベンチャーゲーム</span></h4>
+</div>
 	
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study4.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>ロールプレイングゲーム</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study5.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>パズルゲーム</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study6.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>音楽ゲーム</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study7.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
+
+</div>
+<div class="all">
+  <h4><span>トレーディングカード</span></h4>
+</div>
+<div class="registers-container">
+	<% @register.each.with_index(1) do |s, i| %>
+	 <% @study8.each.with_index(1) do |t| %>	
+			<div class="register">
+
+			<div class="register2">
+              <h4>第<%= i %>位</h4>
+				<h1><%= s.name %></h1>
+
+				<%= link_to home_path(s.id) do %>
+					<div class='item-img-content'>
+				<%= image_tag s.image_url, size: "250x200", data: {"turbolinks" => false} if s.image? %>
+				    </div>
+				<% end %>
+                    
+			<div class="register-detail">
+				
+					<h5><%= t.name %></h5>
+				
+				<% if user_signed_in? %>
+                
+              
+					<% if current_user.already_liked?(s) %>
+						<%= link_to register_like_path(id: s.id, register_id: s.id), method: :delete do %>
+							<i class="fas fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% else %>
+						<%= link_to register_likes_path(id: s.id, register_id: s.id), method: :post do %>
+							<i class="far fa-heart"></i><%= s.likes.count %>
+						<% end %>
+					<% end %>
+					</div>
+					</div>
+		</div>
+
+				<% else %>
+			<i class="far fa-heart"></i><%= s.likes.count %>
+
+			
+			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			    <% end %>
+
+			
+		    <% end %>
+			<% end %>
+			 
 
 </div>
