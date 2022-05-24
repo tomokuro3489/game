@@ -54,13 +54,13 @@
   <h4><span>アクションゲーム</span></h4>
 </div>
  <div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study.each.with_index(1) do |t| %>	
+	<%  @search.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= t.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -73,8 +73,7 @@
 					<h5><%= tag.name %></h5>
 				<% end %>
 			
-				
-				<% if user_signed_in? %>
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -94,26 +93,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>シューティングゲーム</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study1.each.with_index(1) do |t| %>	
+ <div class="registers-container">
+	<%  @study1.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -122,10 +116,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -145,26 +140,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>シュミレーションゲーム</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study2.each.with_index(1) do |t| %>	
+ <div class="registers-container">
+	<%  @study2.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -173,10 +163,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -196,26 +187,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>レーションゲーム</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study3.each.with_index(1) do |t| %>	
+ <div class="registers-container">
+	<%  @study3.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -224,10 +210,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -247,28 +234,23 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 
 <div class="all">
   <h4><span>アドベンチャーゲーム</span></h4>
 </div>
 	
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study4.each.with_index(1) do |t| %>	
+ <div class="registers-container">
+	<%  @study4.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -277,10 +259,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -300,26 +283,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>ロールプレイングゲーム</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study5.each.with_index(1) do |t| %>	
+ <div class="registers-container">
+	<%  @study5.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -328,10 +306,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -351,26 +330,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>パズルゲーム</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study6.each.with_index(1) do |t| %>	
+  <div class="registers-container">
+	<%  @study6.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -379,10 +353,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -402,26 +377,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>音楽ゲーム</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study7.each.with_index(1) do |t| %>	
+ <div class="registers-container">
+	<%  @study7.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -430,10 +400,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -453,26 +424,21 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>
 <div class="all">
   <h4><span>トレーディングカード</span></h4>
 </div>
-<div class="registers-container">
-	<% @register.each.with_index(1) do |s, i| %>
-	 <% @study8.each.with_index(1) do |t| %>	
+< <div class="registers-container">
+	<%  @study8.each.with_index(1) do |s,i| %>
+	 
 			<div class="register">
 
 			<div class="register2">
               <h4>第<%= i %>位</h4>
-				<h1><%= s.name %></h1>
+				<h1><%=s.name %></h1>
 
 				<%= link_to home_path(s.id) do %>
 					<div class='item-img-content'>
@@ -481,10 +447,11 @@
 				<% end %>
                     
 			<div class="register-detail">
-				
-					<h5><%= t.name %></h5>
-				
-				<% if user_signed_in? %>
+				<% s.tags.each do |tag| %>
+					<h5><%= tag.name %></h5>
+				<% end %>
+			
+		<% if user_signed_in? %>
                 
               
 					<% if current_user.already_liked?(s) %>
@@ -504,12 +471,7 @@
 			<i class="far fa-heart"></i><%= s.likes.count %>
 
 			
-			<a href="/users/<%= s.user.id %>"><%= s.user.name %></a>
+			<a href="/users/<%= t.user.id %>"><%= s.user.name %></a>
 			    <% end %>
-
-			
-		    <% end %>
-			<% end %>
-			 
-
+				<% end %>
 </div>

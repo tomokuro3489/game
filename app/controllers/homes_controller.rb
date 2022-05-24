@@ -1,17 +1,22 @@
 class HomesController < ApplicationController
-  
+  search= Register.includes(:tags).where(registers_tags: {tag_id: 1}).references(:tags)
       def index
         
         @register = Register.all.sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
-        @study =  Register.where(name:"シューティングゲーム")
-        @study1 = Tag.where(name:"シューティングゲーム")
-        @study2 = Tag.where(name:"シュミレーションゲーム")
-        @study3 = Tag.where(name:"レーシングゲーム")
-        @study4 = Tag.where(name:"アドベンチャーゲーム")
-        @study5 = Tag.where(name:"ロールプレイングゲーム")
-        @study6 = Tag.where(name:"パズルゲーム")
-        @study7 = Tag.where(name:"音楽ゲーム")
-        @study8 = Tag.where(name:"トレーディングカード")
+        @registerall = Register.all#.includes(:liked_users).sort {|a,b| b.liked_users.size <=> a.liked_users.size}
+        @study =  RegisterTag.where(tag_id: 1)#.find(Like.group(:post_id).order(‘count(post_id) desc’).pluck(:post_id))
+        @search= Register.includes(:tags).where(register_tags: {tag_id: 1}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        
+        @study1 =  Register.includes(:tags).where(register_tags: {tag_id: 2}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study2 =  Register.includes(:tags).where(register_tags: {tag_id: 3}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study3 =  Register.includes(:tags).where(register_tags: {tag_id: 4}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study4 =  Register.includes(:tags).where(register_tags: {tag_id: 5}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study5 =  Register.includes(:tags).where(register_tags: {tag_id: 6}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study6 =  Register.includes(:tags).where(register_tags: {tag_id: 7}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study7 = Register.includes(:tags).where(register_tags: {tag_id: 8}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+        @study8 =  Register.includes(:tags).where(register_tags: {tag_id: 9}).references(:tags).sort {|a,b| b.liked_users.count <=> a.liked_users.count}.first(3)
+
+
       end 
  
       def show
