@@ -29,7 +29,7 @@
 			<div class="register">
 			<div class="register2">
 				<h1><%= t.name %></h1>
-
+	
 				<%= link_to register_path(t.id) do %>
 					<div class='item-img-content'>
 				<%= image_tag t.image_url, size: "250x200", data: {"turbolinks" => false} if t.image? %>

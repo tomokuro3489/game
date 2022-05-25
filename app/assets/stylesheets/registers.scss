@@ -69,10 +69,19 @@ h3{
   align-self: center;
   text-align: center;
   justify-content:center;
-  border: 4px double #ddd;
+  
   margin: 10em;
   padding: 10em;
+  font-weight: bold;
+    color: #6091d3;/*文字色*/
+    background:cover;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
 }
+
+
+
+
 
 .search{
   display: flex;
