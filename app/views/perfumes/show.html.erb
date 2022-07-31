@@ -1,0 +1,82 @@
+  <div class="intoro">
+            <h5>診断結果</h5>
+            <p>あなたにおすすめの香りは…</p>
+        </div>
+        <div class="tweet-container">
+            <div class="tweet">
+                <% if @perfume.question == "1" and @perfume.question2=="2" and  @perfume.question3=="2" and  @perfume.question4=="2" and   @perfume.question5=="2"  and  @perfume.question6=="1"%>
+                <h6>シュミレーションゲーム</h6>
+                <p>柑橘系の代表的な原料</p>
+                <p>清涼感があり、爽やかな印象</p>
+
+                <% elsif @perfume.question == "2" and @perfume.question2=="1" and  @perfume.question3=="1" and  @perfume.question4=="1" and  @perfume.question5=="1" and  @perfume.question6=="2" %>
+                <h6>アクション</h6>
+                <p>オレンジに似た柑橘系の果物</p>
+                <p>リラックス効果がある</p>
+
+                <% elsif @perfume.question == "1" and @perfume.question2== "2"  and  @perfume.question3=="1" and  @perfume.question4== "1"  and  @perfume.question5== "1"  and  @perfume.question6=="2"%>
+                <h6>格闘・レーシングゲーム</h6>
+                <p>華やかで上品な香り</p>
+                <p>ストレスを緩和してくれる効果がある</p>
+
+                <% elsif @perfume.question == "1" and @perfume.question2=="1" and  @perfume.question3=="2" and  @perfume.question4=="1" and  @perfume.question5=="1" and  @perfume.question6=="1" %>
+                <h6>ロールプレイング・アドベンチャーゲーム</h6>
+                <p>優しく女性らしい香り</p>
+                <p>気持ちを落ち着かせてくれる</p>
+
+                <% elsif  @perfume.question =="2" and @perfume.question2=="1"  and  @perfume.question3=="2" and  @perfume.question4== "1"  and  @perfume.question5=="1" and  @perfume.question6=="2" %>
+                <h6>シューティングゲーム</h6>
+                <p>爽やかなのに官能的な香り</p>
+                <p>幸福感を得やすい</p>
+
+                <% elsif @perfume.question == "2"  and @perfume.question2=="1" and  @perfume.question3=="2" and  @perfume.question4== "1"  and  @perfume.question5=="2" and  @perfume.question6=="1" %>
+                <h6>パズル</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                <% elsif @perfume.question == "1"  and @perfume.question2=="1" and  @perfume.question3=="2" and  @perfume.question4== "2"  and  @perfume.question5=="1" and  @perfume.question6=="2" %>
+                <h6>音楽ゲーム</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                <% elsif @perfume.question == "1"  and @perfume.question2=="2" and  @perfume.question3=="2" and  @perfume.question4== "1"  and  @perfume.question5=="1" and  @perfume.question6=="2" %>
+                <h6>トレーディングカードゲーム</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                <% elsif @perfume.question == "1"  and @perfume.question2=="2" and  @perfume.question3=="2" and  @perfume.question4== "1"  and  @perfume.question5=="1" and  @perfume.question6=="2" %>
+                <h6>トレーディングカードゲーム</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                 <% elsif @perfume.question == "1" and  @perfume.question5 == "2"%>
+                <h6>アチーバー（Achiever）</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                <% elsif @perfume.question == "2" and  @perfume.question2 == "2"%>
+                <h6>エクスプローラー（Explorer）</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                 <% elsif @perfume.question2 == "2" and  @perfume.question4 == "2"%>
+                <h6>ソーシャライザー（Socilizer）</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+                <% elsif @perfume.question2 == "1" and @perfume.question4 == "1" and  @perfume.question5 == "1"%>
+                <h6>キラー（Killer）</h6>
+                <p>フレッシュで優しい香り</p>
+                <p>アンチエイジングにも最適</p>
+
+
+                
+
+                <% else @perfume.question =="1" %>
+                <h6>該当なし</h6>
+                <p>お香としてよく使われる白檀の香り</p>
+                <p>集中力を高める効果もあり</p>
+
+                <% end %>
+
+        </div>

@@ -61,6 +61,8 @@ gem 'cloudinary'
 
 gem 'dotenv-rails'
 
+ gem 'kaminari'
+
 group :production do
   gem 'pg'
 end

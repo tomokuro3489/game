@@ -1,0 +1,58 @@
+<%= form_for @perfume do |f| %>
+
+            <div class="container-sindan">
+
+            
+                <div class="row">
+                
+                    <div class="col-12">
+                        <p>Question1. どこかに旅行いくとき</p>
+                    </div>
+                   <div class="col-6">
+                    <%= f.select :question, {'事前に計画するタイプ':'1', '当日の直感に任せるタイプ':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+                    </div>
+                   
+                    <div class="col-12">
+                        <p>Question2. どちらかというと…</p>
+                    </div>
+    
+                    <div class="col-6">
+                    <%= f.select :question2, {'一人でいることが好きなタイプ':'1', '友達といることが好きなタイプ':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+                    </div>
+                    <div class="col-12">
+                        <p>Question3. 好きな異性にどっちのアプローチをとる？</p>
+                    </div>
+                    <div class="col-6">
+                    <%= f.select :question3, {'短期決戦で勝負するタイプ':'1', '長期決戦で勝負するタイプ':'2'},{ include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+                    </div>
+                  
+                    <div class="col-12">
+                        <p>Question4. グループ学習での立ち位置は？</p>
+                    </div>
+                    <div class="col-6">
+                    <%= f.select :question4, {'リーダーとして仕切るタイプ':'1', 'サポートに回るタイプ':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+                    </div>
+                    
+                    <div class="col-12">
+                        <p>Question5. 何かを成し遂げた時、重視にすることは？</p>
+                    </div>
+                    <div class="col-6">
+                    <%= f.select :question5, {'成果を重視するタイプ':'1', '過程を重視するタイプ':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+                    </div>
+                    
+                    <div class="col-12">
+                        <p>Question6. あなたは天才型？　努力型？</p>
+                    </div>
+                    <div class="col-6">
+                    <%= f.select :question6, {'天才型かも！！':'1', '努力型かも！！':'2'}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+                    </div>
+                </div>
+            </div>
+            <div class="sindanbotan">
+                <%= f.submit "post" %>
+            </div>
+
+<% end %>
+
+
+

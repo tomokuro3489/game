@@ -4,6 +4,7 @@ devise_for :users
 resources :users, only: [:show]
 resources :homes
 resources :tops
+resources :perfumes
 resources :registers do
 resources :likes, only: [:create, :destroy]
 end
