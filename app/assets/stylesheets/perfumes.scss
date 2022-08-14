@@ -3,3 +3,28 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
+*{
+    padding: 0;
+    margin: 0;
+  }
+
+  .main{
+    text-align: center;
+    align-items: center;
+  }
+
+  .main2{
+    height: 500px;
+    margin: 90px;
+    padding: 30px;
+    background-image: url(assets/second.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  
+
+  .start{
+    text-align: center;
+    align-items: center;
+  }
