@@ -153,5 +153,86 @@
     align-items: center;
   }
 
+  .kuuhaku{
+    height: 100px;
+  }
 
- 
+
+  .dropholder{
+    width: 400px;
+    height: 60px;
+    margin:100px auto;
+    padding:0 0 0 20px;
+    border-radius:10px;
+    font:18px arial;
+    color: #fff;
+    position: relative;
+    box-sizing:border-box;
+    border:1px solid #9b0db9;
+    animation: move 3s ease-in-out infinite;
+    position: relative;
+  }
+  .dropholder:hover, .dropholder:hover:after{
+    animation-play-state:paused;
+  }
+  .dropholder:after{
+    content:"";
+    position: absolute;
+    width: 500px;
+    height: 5px;
+    background:rgba(0,0,0, 0);
+    display: block;
+    top:100px;
+    left:37px;
+    margin: auto;
+    border-radius:50%;
+    box-shadow:0 15px 10px rgba(0,0,0, 0.4);
+    animation: moveShadow 3s ease-in-out infinite;
+  }
+  p{
+    float: left;
+    line-height:60px;
+  }
+  .dropdown > p{
+    font-size:16px;
+  }
+  .dropdown, .dropholder{
+    background:linear-gradient(#da4df8 ,#9b0db9);
+  }
+  .dropdown{
+    margin-left:20px;
+    float: left;
+    width: 280px;
+    padding:0 0 0 20px;
+    border-radius:0 10px 10px 0;
+    cursor: pointer;
+    height:58px;
+    border-left:1px solid #da4df8;
+    position: relative;
+  }
+  .dropdown:hover{
+    background:linear-gradient(#da4df8 ,#b11cd0);
+  }
+  .dropdown:after{
+    font-size: 18px;
+    position: absolute;
+    right:20px;
+    top:10px;
+    display: block;
+  }
+  
+
+  @keyframes move{
+    0%, 100%{transform:translateY(-10px);}
+    50%{transform:translateY(0);}
+  }
+  
+  @keyframes moveShadow{
+    0%,100%{transform:translateY(10px);opacity:0.4;}
+    50%{transform:translateY(0);opacity:1;}
+  }
+
+  .form-control{
+    width: 250px;
+    height: 40px;
+  }

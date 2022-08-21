@@ -12,7 +12,7 @@
             <%= f.label :password, "パスワード" %>
           </div>
           <div class="column-right">
-            <%= link_to "パスワードを忘れた場合", new_user_password_path %>
+            <%= link_to "パスワードを忘れた場合", new_user_password_path , data: {"turbolinks" => false}%>
           </div>
         </div>
         <%= f.password_field :password, autocomplete: "current-password" %>
@@ -23,8 +23,7 @@
     <% end %>
 
     <div class="box-newusr">
-      <p><span>------------</span> 未登録の場合 <span>------------</span></p>
-      <%= link_to "アカウントを作成", new_user_registration_path %>
+      <%= link_to "アカウントを作成", new_user_registration_path , data: {"turbolinks" => false}  %>
     </div>
   </div>
 </div>
