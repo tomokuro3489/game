@@ -243,7 +243,7 @@
     width: 280px;
     height: 55px;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .sindanbotan{
     font-family: 'Caveat', cursive;
@@ -263,4 +263,33 @@
     border-radius: 20px;
     background:linear-gradient(#da4df8 ,#fe8e8e);
 
+  }
+
+  .intoro h5{
+    color: #ffeba7;
+    font-size: 50px;
+  }
+
+  .tweet h2{
+    color: #ffeba7;
+
+    text-align: start;
+  }
+  .tweet h6{
+    color: #ffeba7;
+
+    font-size: 25px;
+  }
+
+  .tweet h4{
+
+    font-size: 20px;
+  }
+
+  .tweet{
+    margin: 5em;
+    color: white;
+    background: cover;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.22);
   }
