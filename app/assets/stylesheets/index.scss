@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 
-$color-gray: black;
+$color-gray: rgb(247, 247, 247);
 $color-black: red;
 $stripe-height: 7px;
 $btn-color: $color-gray;
-$btn-background: rgb(3, 224, 143);
+$btn-background: rgb(0, 0, 0);
 $btn-color-hover: red;
 $btn-background-hover: $color-gray;
 $border-color: $color-gray;
@@ -113,7 +113,7 @@ $border-color-hover: $color-black;
 }
 
 .spinner > div {
-  background-color: #333;
+  background-color: rgb(255, 13, 13);
   height: 100%;
   width: 6px;
   display: inline-block;
@@ -216,7 +216,7 @@ $border-color-hover: $color-black;
    .box_css a{
     opacity: 0.9;
      background-color: cover;
-     color:  black;
+     color:  rgb(253, 0, 0);
    }
 
    .login a{
