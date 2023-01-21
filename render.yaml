@@ -1,0 +1,21 @@
+databases:
+  - name: game_DB
+    databaseName: postgres://game_db_user:RYfcOmjZfinUwcEY09pDnl4GfFOJJCeS@dpg-cf5ovkkgqg47vk645ecg-a/game_db
+    user: game
+    region: singapore
+
+services:
+  - type: web
+    name: game
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: game_DB
+          property: connectionString
+      - key: f2fb09d9c09787dfe45756b324b2ade9
+        sync: false
