@@ -64,7 +64,7 @@ gem 'dotenv-rails'
  gem 'kaminari'
 
 group :production do
-  gem 'pg'
+  gem "pg", "~> 1.4"
 end
 
 gem 'bootstrap', '~> 4.3.1'
